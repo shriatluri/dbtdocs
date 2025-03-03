@@ -1,12 +1,13 @@
 version: 2
-
 models:
-  - name: stg_orders
-    description: "Staging table for orders data."
-    columns:
-      - name: order_id
-        description: "Unique identifier for an order."
-      - name: order_date
-        description: "Date when the order was placed."
-      - name: customer_id
-        description: "Identifier for the customer who placed the order."
+- name: int_orders
+  description: Intermediate table for enriched orders data.
+  columns:
+  - name: order_id
+    description: Unique identifier for an order.
+  - name: order_date
+    description: Date when the order was placed.
+  - name: customer_id
+    description: Identifier for the customer who placed the order.
+  - name: order_month
+    description: Month of the order (new column).
