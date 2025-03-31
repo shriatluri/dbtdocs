@@ -1,0 +1,2 @@
+command to run: python scripts/propagate_docs.py models/staging/stg_orders.yml models/intermediate/int_orders.yml
+python scripts/propagate_docs.py <source file path> <target file path>

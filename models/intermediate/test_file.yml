@@ -1,10 +1,26 @@
 version: 2
+
 models:
   - name: int_orders
     description: "Intermediate table for enriched orders data."
     columns:
-      - name: order_id
-      - name: order_date
-      - name: customer_id
-      - name: order_month
-        description: "Month of the order (new column)."
+      - name: id
+        description: ""  # Empty, will be filled
+      - name: name
+        description: ""  # Empty, will be filled
+      - name: desc
+        description: ""  # Empty, will be filled
+      - name: value
+        description: ""  # Empty, will be filled
+      - name: agg_value
+        description: ""  # Empty, will be filled
+      - name: col1
+        description: ""  # This column exists in both stg_store & table2
+      - name: col2
+        description: ""  # This column exists in both stg_store & table2
+      - name: col3
+        description: ""  # This column exists in both stg_store & table2
+      - name: col4
+        description: ""  # This column exists in both stg_store & table2
+      - name: extra_column
+        description: "This column does not exist in the source."  # Custom column

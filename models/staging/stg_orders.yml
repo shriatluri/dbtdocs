@@ -1,12 +1,47 @@
 version: 2
 
 models:
-  - name: stg_orders
-    description: "Staging table for orders data."
+  - name: stg_item
+    description: "Staging table for item data."
+    meta:
+      dagster:
+        asset_key: ['stg_item']
     columns:
-      - name: order_id
-        description: "Unique identifier for an order."
-      - name: order_date
-        description: "Date when the order was placed."
-      - name: customer_id
-        description: "Identifier for the customer who placed the order."
+      - name: id
+        description: "Unique identifier for an item."
+        data_tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Name of the item."
+      - name: desc
+        description: "Description of the item"
+      - name: value
+        description: "value for the item"
+      - name: agg_value
+        description: "value for the agg_value in the item"
+  - name: stg_store
+    description:  "This is a dummy table to test the documentation script"
+    columns:
+      - name: col1
+        description: "This is a description"
+        data_tests:
+          - unique
+          - not_null
+      - name: col2
+        description: "Here is my second description"
+      - name: col3
+        description: "Here is my third"
+      - name: col4
+        description: "Here is the last"
+  - name: table2
+    description: "Another dummy table to test documentation script"
+    columns:
+      - name: col1
+        description: "And Another"
+      - name: col2
+        description: "And Another"
+      - name: col3
+        description: "And Another 2"
+      - name: col4
+        description: "And Another 3"
